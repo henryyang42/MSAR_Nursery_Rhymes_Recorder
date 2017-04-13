@@ -49,17 +49,17 @@
   }
   #record.recording {
     background: red;
-    background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,white 75%,white 100%,#7db9e8 100%);
-    background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%,white 75%,white 100%,#7db9e8 100%);
-    background: radial-gradient(center, ellipse cover, #ff0000 0%,white 75%,white 100%,#7db9e8 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%,#7db9e8 100%);
+    background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%,#7db9e8 100%);
+    background: radial-gradient(center, ellipse cover, #ff0000 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%,#7db9e8 100%);
   }
   #save { opacity: 0.25;}
   #save[download] { opacity: 1;}
   #draggable {
-    border: 2px solid;
+    border: 2px rgba(193, 195, 196, 1);
     border-radius: 25px;
     position: fixed;
-
+    box-shadow: 8px 8px 3px #888888;
     right: 20px;
     bottom: 100px;
     float: right;
@@ -68,6 +68,7 @@
     width: 400px;
     z-index: 300;
     cursor: move;
+    background: rgba(193, 195, 196, 0.67);
   }
   </style>
 </head>
