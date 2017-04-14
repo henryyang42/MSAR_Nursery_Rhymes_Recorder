@@ -65,6 +65,11 @@ function toggleRecording( e ) {
         e.classList.add("recording");
         audioRecorder.clear();
         audioRecorder.record();
+        setTimeout(function(){
+            audioRecorder.stop();
+            e.classList.remove("recording");
+            audioRecorder.getBuffers( gotBuffers );
+        }, 10000)
     }
 }
 

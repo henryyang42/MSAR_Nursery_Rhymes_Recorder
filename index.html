@@ -77,6 +77,7 @@
 <body ng-app="CMI" ng-controller="CMITest">
   <h1 style="text-align: center">NURSERY RHYMES RECORDER</h1>
   <div id="draggable" ng-show="start" class="mobile-hide">
+    <div id="timer" style="margin: 20px 10px 0px 50px;">按下錄音10秒後會自動結束錄音。</div>
     <div id="viz" style="float:right;margin: 20px;">
       <canvas id="analyser" width="256" height="128"></canvas><br>
       <canvas id="wavedisplay" width="256" height="128"></canvas>
@@ -172,12 +173,14 @@ CMI.controller('CMITest', function($scope, $filter) {
     mp3.play();
     $scope.playing = name;
   }
+
   $scope.pause = function() {
     for(var k in mp3Map) {
       var mp3 = document.getElementById("player" + k);
       mp3.pause();
     }
   }
+
   $scope.startTest = function() {
     if(!$scope.learningMode)
       $scope.question(0);
