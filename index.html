@@ -75,7 +75,11 @@
 </head>
 
 <body ng-app="CMI" ng-controller="CMITest">
-  <h1 style="text-align: center">NURSERY RHYMES RECORDER</h1>
+  <!--div style="display: inline-block;">
+    <img src="img/nlp.png" style="margin:20px">
+    <h1 style="text-align: center;float: right;">NURSERY RHYMES RECORDER</h1>
+  </div-->
+  <h1 style="text-align: center;"><a href="http://nlg.csie.ntu.edu.tw/"><img src="img/nlp.png" style="margin:5px"></a>NURSERY RHYMES RECORDER</h1>
   <div id="draggable" ng-show="start" class="mobile-hide">
     <div id="timer" style="margin: 20px 10px 0px 50px;">按下錄音10秒後會自動結束錄音。</div>
     <div id="viz" style="float:right;margin: 20px;">
@@ -128,7 +132,7 @@
 </body>
 <script type="text/javascript">
 $( "#draggable" ).draggable();
-var mp3Map ={0: "Hictory dictory dock", 1: "Humpty dumpty", 2: "I'm the teapot", 3: "I've been working on the railroad", 4: "Merrily we roll along", 5: "Six little ducks", 6: "Skip to my lou", 7: "The farmer in the dell", 8: "Wheels on the bus", 9: "Yankee doodle", 10: "十個印地安人", 11: "三輪車", 12: "小毛驢", 13: "小星星", 14: "小茶壺", 15: "火車快飛", 16: "王老先生有塊地", 17: "世上只有媽媽好", 18: "只要我長大", 19: "生日快樂", 20: "西風的話", 21: "兩隻老虎", 22: "明天會更好", 23: "泥娃娃", 24: "虎姑婆", 25: "長城謠", 26: "青春舞曲", 27: "秋蟬", 28: "茉莉花", 29: "倫敦鐵橋垮下來", 30: "捉泥鰍", 31: "捕魚歌", 32: "高山青", 33: "甜蜜的家庭", 34: "魚兒魚兒水中游", 35: "喔,蘇姍那", 36: "童年", 37: "萍聚", 38: "當我們同在一起", 39: "遊子吟", 40: "綠油精", 41: "潑水歌", 42: "蝴蝶", 43: "鍋牛與黃鸝鳥", 44: "魯啦啦", 45: "龍的傳人", 46: "懶惰蟲", 47: "歡樂年華",48: "小林さんちのメイドラゴン OP" ,49: "小林さんちのメイドラゴン ED"}
+var mp3Map = {0: "Hictory dictory dock", 1: "Humpty dumpty", 2: "I'm the teapot", 3: "I've been working on the railroad", 4: "Merrily we roll along", 5: "Six little ducks", 6: "Skip to my lou", 7: "The farmer in the dell", 8: "Wheels on the bus", 9: "Yankee doodle", 10: "Ten little indians (十個印地安人)", 11: "Tricycle (三輪車)", 12: "Little donkey (小毛驢)", 13: "Twinkle twinkle little star (小星星)", 14: "Little tea kettle (小茶壺)", 15: "Fast train (火車快飛)", 16: "Old macdonald had a farm (王老先生有塊地)", 17: "Mother is the best in the world (世上只有媽媽好)", 18: "As long as i grow up (只要我長大)", 19: "Happy birthday (生日快樂)", 20: "Words from westwind (西風的話)", 21: "Frere jacques (兩隻老虎)", 22: "Tomorrow will be better (明天會更好)", 23: "Clay doll (泥娃娃)", 24: "Tiger aunt (虎姑婆)", 25: "Great wall song (長城謠)", 26: "Youth dance song (青春舞曲)", 27: "Autumn cicada (秋蟬)", 28: "Jasmine (茉莉花)", 29: "London bridge is falling down (倫敦鐵橋垮下來)", 30: "Catch loach (捉泥鰍)", 31: "Fishing song (捕魚歌)", 32: "High green mountains (高山青)", 33: "Home sweet home (甜蜜的家庭)", 34: "Fish swimming in the water (魚兒魚兒水中游)", 35: "Oh, susanna (喔,蘇姍那)", 36: "Childhood_sylvia chang (童年)", 37: "Duckweed encounter (萍聚)", 38: "When we're together (當我們同在一起)", 39: "Song of a wanderer (遊子吟)", 40: "This old man (綠油精)", 41: "Splashing water song (潑水歌)", 42: "Butterfly (蝴蝶)", 43: "Snail and oriole bird_yinxia (鍋牛與黃鸝鳥)", 44: "Lulala (魯啦啦)", 45: "Descendants of the dragon_jian-fu li (龍的傳人)", 46: "Lazy worm (懶惰蟲)", 47: "Happy days (歡樂年華)", 48: "小林さんちのメイドラゴン OP" , 49: "小林さんちのメイドラゴン ED"}
 songList = [];
 for(var k in mp3Map)
   songList.push([mp3Map[k], k])
