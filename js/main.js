@@ -48,7 +48,15 @@ function gotBuffers( buffers ) {
 }
 
 function doneEncoding( blob ) {
-    Recorder.setupDownload( blob, "myRecording" + ((recIndex<10)?"0":"") + recIndex + ".wav" );
+    filename = $('#playing').html() || 'myRecording';
+    if (filename in mp3Map) {
+        filename = mp3Map[filename];
+        filename = filename.toLowerCase().replace(/ *\([^)]*\) */g, "") + '_unknown_0';
+
+    }
+    filename += '.wav'
+    $('#filename').html(filename);
+    Recorder.setupDownload( blob, filename );
     recIndex++;
 }
 

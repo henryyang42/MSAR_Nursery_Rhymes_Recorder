@@ -75,13 +75,9 @@
 </head>
 
 <body ng-app="CMI" ng-controller="CMITest">
-  <!--div style="display: inline-block;">
-    <img src="img/nlp.png" style="margin:20px">
-    <h1 style="text-align: center;float: right;">NURSERY RHYMES RECORDER</h1>
-  </div-->
   <h1 style="text-align: center;"><a href="http://nlg.csie.ntu.edu.tw/"><img src="img/nlp.png" style="margin:5px"></a>NURSERY RHYMES RECORDER</h1>
   <div id="draggable" ng-show="start" class="mobile-hide">
-    <div id="timer" style="margin: 20px 10px 0px 50px;">按下錄音10秒後會自動結束錄音。</div>
+    <div id="timer" style="margin: 10px 10px 0px 50px;">按下錄音10秒後會自動結束錄音。</div>
     <div id="viz" style="float:right;margin: 20px;">
       <canvas id="analyser" width="256" height="128"></canvas><br>
       <canvas id="wavedisplay" width="256" height="128"></canvas>
@@ -91,7 +87,10 @@
       <br>
       <a id="save"><img src="img/save.png"></a>
     </div>
+    <div id="playing" style="visibility: hidden;">{{playing}}</div>
+    <div id="filename" style="margin: 0px 0px 0px 50px;"></div>
   </div>
+
 
   <div style="width:70%;margin: 0 auto;">
     <div style="margin: 0 auto;">
