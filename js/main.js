@@ -50,8 +50,23 @@ function gotBuffers( buffers ) {
 function doneEncoding( blob ) {
     filename = $('#playing').html() || 'myRecording';
     if (filename in mp3Map) {
-        filename = mp3Map[filename];
-        filename = filename.toLowerCase().replace(/ *\([^)]*\) */g, "") + '_unknown_0';
+        filename = mp3Map[filename].toLowerCase().replace(/ *\([^)]*\) */g, "");
+        //childhood_Sylvia Chang_0
+        //snail and oriole bird_yinxia_0
+        //descendants of the dragon_Jian-Fu Li_0
+        switch(filename) {
+            case 'childhood':
+                filename = filename + '_Sylvia Chang_0';
+            break;
+            case 'snail and oriole bird':
+                filename = filename + '_yinxia_0';
+                break;
+            case 'descendants of the dragon':
+                filename = filename + '_Jian-Fu Li_0';
+                break;
+            default:
+                filename = filename + '_unknown_0';
+        }
 
     }
     filename += '.wav'
